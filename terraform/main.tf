@@ -1,9 +1,10 @@
 /* terraform {
   required_version = "~> 0.12.5"
 
-  backend "remote" {
-    hostname = "app.terraform.io"
-    organization = "curso-aws-com-terraform"
+  backend "s3" {
+    hostname = "you s3 bucket name with your tfstate file"
+    key = "terraform.tfstate"
+    region = "us-east-1"
 
     workspaces{
         name = "default"
